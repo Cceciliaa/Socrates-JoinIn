@@ -6,11 +6,9 @@ import {BrowserRouter} from 'react-router-dom';
 import InputQuestion from './Components/InputQuestion';
 import AnswerBox from './Components/AnswerBox';
 import VoteAnswer from './Components/VoteAnswer';
-import PickStudent from './Components/PickStudents';
 import Validate from './Components/validate';
 import './Links.css';
 import { Route, Link } from 'react-router-dom';
-import PickStudents from './Components/PickStudents';
 
 import './App.css';
 
@@ -150,13 +148,6 @@ class App extends Component {
           </div> */}
         </div>
       )
-    } else if (this.state.status === 'pick') {
-      this.changeBackground('#f5a97e')
-      return (
-        <div className="alert alert-info" role="alert">
-          <PickStudent chooseStudent={this.handleClick}/>
-        </div>
-      )
     } else if (this.state.status === 'answer') {
       this.changeBackground('cornflowerblue')
       return (
@@ -211,7 +202,6 @@ class App extends Component {
             <nav>
               <ul>
                 <li><Link to="/InputQuestion">Input Question</Link></li>
-                <li><Link to="/PickStudent">Pick Students</Link></li>
                 <li><Link to="/EnterAnswer">Enter Your Answer</Link></li>
                 <li><Link to="/Vote">Vote on an Answer</Link></li>
                 <li><Link to="/Validate">Validate Answers</Link></li>
@@ -236,7 +226,6 @@ class App extends Component {
               <this.handlePage />
 
               {/* <Route path="/InputQuestion" exact component={InputQuestion}  /> */}
-              <Route path="/Dummy" exact component={PickStudents} />
               <Route path="/Dummy" exact component={VoteAnswer} />
               <Route path="/Dummy" exact component={Validate} />
               {/* <Route
