@@ -11,7 +11,7 @@ class VoteAnswer extends React.Component {
 
     handleClick(studentID) {
         this.props.handleVote(studentID);
-        alert("Thanks for voting!");
+        // alert("Thanks for voting!");
     }
 
     addVote = () => {

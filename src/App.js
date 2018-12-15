@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Button } from 'antd';
-import {BrowserRouter} from 'react-router-dom';
 
 import InputQuestion from './Components/InputQuestion';
 import AnswerBox from './Components/AnswerBox';
 import VoteAnswer from './Components/VoteAnswer';
 import Validate from './Components/validate';
 import './Links.css';
-import { Route, Link } from 'react-router-dom';
 
 import './App.css';
 
@@ -195,50 +193,12 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <div className = "Links">
-          <header>
-            <nav>
-              <ul>
-                <li><Link to="/InputQuestion">Input Question</Link></li>
-                <li><Link to="/EnterAnswer">Enter Your Answer</Link></li>
-                <li><Link to="/Vote">Vote on an Answer</Link></li>
-                <li><Link to="/Validate">Validate Answers</Link></li>
-                {/* <li><Link to="/Vote">Vote</Link></li>
-                <li><Link to="/Validate">Validate</Link></li> */}
-                {/* From a sample I was using: */}
-                {/* <li><Link to={{
-                  pathname: '/new-post',
-                  hash: '#submit',
-                  search: '?quick-submit=true'
-                }}>New Post</Link></li> */}
-                
-              </ul>
-            </nav>
-          </header>
-          
-        </div>
-        {/* We can use browser routing in any element. */}
-        
+    return (      
           <div className="App">
             <header className="App-header">
               <this.handlePage />
-
-              {/* <Route path="/InputQuestion" exact component={InputQuestion}  /> */}
-              <Route path="/Dummy" exact component={VoteAnswer} />
-              <Route path="/Dummy" exact component={Validate} />
-              {/* <Route
-                path= "/InputQuestion"
-                render={(props) =><Component {...props} addQuestion={this.addQuestion} />}
-              >
-              </Route> */}
-
             </header>
           </div>
-          
-        
-      </div>
     )
   }
 }
