@@ -14,7 +14,8 @@ The professor can input the question from his interface. On submission, the app 
 
 Link to [Heroku CLI](https://joinin-socrates.herokuapp.com)
 
-![QR code](Joinin.png) for deployment on mobile phones.
+For deployment on mobile phones, scan: 
+![QR code](Joinin.png) 
 
 ### Future improvement
 
