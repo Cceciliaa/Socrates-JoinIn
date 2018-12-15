@@ -13,7 +13,8 @@ The professor can input the question from his interface. On submission, the app 
 ### App deployment
 
 Link to [Heroku CLI](https://joinin-socrates.herokuapp.com)
-[QR code](Joinin.png) for deployment on mobile phones.
+
+![QR code](Joinin.png) for deployment on mobile phones.
 
 ### Future improvement
 
