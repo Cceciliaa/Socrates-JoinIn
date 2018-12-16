@@ -8,7 +8,7 @@ This is only a demo rather than the final version of the app. It shows the inter
 
 ### Functionality
 
-The professor can input the question from his interface. On submission, the app will randomly select four students from the recorded name list, and push the question to their interfaces. The four selected students will have to input their answers within some time limits, and their answers will later be sent to the rest of the students as four answer choices. Students receiving the multiple-choice question can vote for the answers that they agree with by clicking on them. After the voting session, the professor can get the voting result by click on the "validate" button, base on which he can grasp the learning pace of his students, and explain the question by analysing the four answers. The "reset" button will clear the data and return to the interface for the professor to input his/her question.
+The professor can input the question from his/her interface. On submission, the app will randomly select four students from the recorded name list, and push the question to their interfaces. The four selected students will have to input their answers within some time limits, and their answers will later be sent to the rest of the students as four answer choices. Students receiving the multiple-choice question can vote for the answers that they agree with by clicking on them. After the voting session, the professor can get the voting result by clicking the "validate" button, base on which he/shi can grasp the learning pace of his/her students, and explain the question by analysing the four answers. The "reset" button will clear the data and return to the interface for the professor to input his/her question.
 
 ### App deployment
 
