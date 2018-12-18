@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Button } from 'antd';
+import { Steps, Icon } from 'antd';
+import { Layout, Menu, Breadcrumb } from 'antd';
 
 import InputQuestion from './Components/InputQuestion';
 import AnswerBox from './Components/AnswerBox';
@@ -10,10 +12,12 @@ import './Links.css';
 
 import './App.css';
 
+const Step = Steps.Step;
+const { Header, Content, Footer } = Layout;
 
 // All of our functionality is currently in the App class.
 class App extends Component {
-   
+
   constructor() {
     super();
     // Contains our properties:
@@ -41,7 +45,7 @@ class App extends Component {
 
   // Updates the current question and move the status to the next section:
   addQuestion = (question) => {
-    this.setState({ question: question})
+    this.setState({ question: question })
   }
 
   // Get a random, small group of students from all the students. 
@@ -120,25 +124,27 @@ class App extends Component {
   }
 
   reset = () => {
-    this.setState({ question: '',
-    chosenStudents: [],
-    answersArray: [],
-    currentID: 0,
-    status: 'question'})
+    this.setState({
+      question: '',
+      chosenStudents: [],
+      answersArray: [],
+      currentID: 0,
+      status: 'question'
+    })
   }
 
   changeBackground(color) {
     document.body.style.background = color;
- }
- 
+  }
+
 
   handlePage = () => {
     if (this.state.status === 'question') {
       this.changeBackground('#f5a97e')
       return (
-       <div>
+        <div>
           <div className="CoolText">
-            <InputQuestion addQuestion={this.addQuestion} chooseStudent={this.handleClick}/>
+            <InputQuestion addQuestion={this.addQuestion} chooseStudent={this.handleClick} />
           </div>
           {/* <div className="progress">
             <div className="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
@@ -185,7 +191,7 @@ class App extends Component {
             <Validate question={this.state.question} answersArray={this.state.answersArray} />
           </div>
           <div>
-          <Button type="primary" onClick={this.reset} className="select">Reset</Button>
+            <Button type="primary" onClick={this.reset} className="select">Reset</Button>
           </div>
         </div>
       )
@@ -193,12 +199,32 @@ class App extends Component {
   }
 
   render() {
-    return (      
-          <div className="App">
-            <header className="App-header">
-              <this.handlePage />
-            </header>
-          </div>
+    return (
+      <div className="App">
+        <Layout>
+          <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+            <div className="logo" />
+            <Menu
+              theme="dark"
+              mode="horizontal"
+              defaultSelectedKeys={['2']}
+              style={{ lineHeight: '64px' }}
+            >
+              <div>
+                <Steps className="steps">
+                  <Step status="finish" title={<p className="nvg">Input Question</p>} icon={<Icon type="user" />}></Step>
+                  <Step status="finish" title={<p className="nvg">Input Answer</p>} icon={<Icon type="solution" />}></Step>
+                  <Step status="process" title={<p className="nvg">Vote</p>} icon={<Icon type="loading" />}></Step> 
+                  <Step status="finish" title={<p className="nvg">Validate</p>} icon={<Icon type="smile-o" />}></Step> 
+                </Steps>
+              </div>
+            </Menu>
+          </Header>
+        </Layout>
+        <header className="App-header">
+          <this.handlePage />
+        </header>
+      </div>
     )
   }
 }
