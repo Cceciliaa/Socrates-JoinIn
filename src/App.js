@@ -202,7 +202,7 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
-          <Header style={{ width: '100%' }}>
+          <Header>
             <div className="logo" />
             <Menu
               theme="dark"
