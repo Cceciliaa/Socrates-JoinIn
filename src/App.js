@@ -202,7 +202,7 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
-          <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+          <Header style={{ width: '100%' }}>
             <div className="logo" />
             <Menu
               theme="dark"
@@ -210,14 +210,12 @@ class App extends Component {
               defaultSelectedKeys={['2']}
               style={{ lineHeight: '64px' }}
             >
-              <div>
                 <Steps className="steps">
                   <Step status="finish" title={<p className="nvg">Input Question</p>} icon={<Icon type="user" />}></Step>
                   <Step status="finish" title={<p className="nvg">Input Answer</p>} icon={<Icon type="solution" />}></Step>
                   <Step status="process" title={<p className="nvg">Vote</p>} icon={<Icon type="loading" />}></Step> 
                   <Step status="finish" title={<p className="nvg">Validate</p>} icon={<Icon type="smile-o" />}></Step> 
                 </Steps>
-              </div>
             </Menu>
           </Header>
         </Layout>

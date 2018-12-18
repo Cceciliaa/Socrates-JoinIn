@@ -91,6 +91,8 @@ h1 {
 
 .steps {
   margin-left: -5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .nvg {
